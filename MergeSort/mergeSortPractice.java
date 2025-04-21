@@ -28,7 +28,7 @@ public class mergeSortPractice {
             k++;
         }
 
-        while (i < l) {
+        while (i < mid) {
             arr[k] = leftArray[i];
             i++;
             k++;
@@ -41,13 +41,13 @@ public class mergeSortPractice {
         }
     }
 
-    void sort(int arr[], int left, int right) {
-        if (left < right) {
-            int mid = (left + right) / 2;
+    void sort(int arr[], int st, int end) {
+        if (st < end) {
+            int mid = (st + end) / 2;
 
-            sort(arr, left, mid);
-            sort(arr, mid + 1, right);
-            mergeSort(arr, left, mid, right);
+            sort(arr, st, mid);
+            sort(arr, mid + 1,end);
+            mergeSort(arr, st, mid, end);
         }
     }
 

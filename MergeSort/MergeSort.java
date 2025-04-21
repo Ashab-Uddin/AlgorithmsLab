@@ -22,7 +22,7 @@ public class MergeSort {
         
         // Merge the two arrays
         while (i < l && j < r) {
-            if (leftArray[i] <= rightArray[j]) {
+            if (leftArray[i] >= rightArray[j]) {
                 arr[k] = leftArray[i];
                 i++;
             } else {
@@ -63,7 +63,7 @@ public class MergeSort {
         ob.sort(arr, 0, arr.length - 1);  // Calling the method
 
         // Printing the output
-        System.out.println("Sorted array:");
+        System.out.print("Sorted array: ");
         for (int i = 0; i < arr.length; i++) {
             System.out.print(arr[i] + " ");
         }
