@@ -1,1 +1,1 @@
-ShortestPath
+dijkstra
