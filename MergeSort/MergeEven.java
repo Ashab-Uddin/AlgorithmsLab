@@ -1,7 +1,7 @@
 import java.util.ArrayList;
 import java.util.List;
 
-public class MergeSortMainVersion {
+public class MergeEven {
 
     // Function to merge two sorted subarrays
     void merge(int[] arr, int start, int mid, int end) {
@@ -12,11 +12,17 @@ public class MergeSortMainVersion {
         // Compare and merge elements from both halves
         while (i <= mid && j <= end) {
             if (arr[i] <= arr[j]) {
-                temp.add(arr[i]);
+                if(arr[i]%2 == 0){
+                    temp.add(arr[i]);
                 i++;
+                }
+                
             } else {
-                temp.add(arr[j]);
+                if(arr[i]%2 ==0){
+                    temp.add(arr[j]);
                 j++;
+                }
+                
             }
         }
 
@@ -52,7 +58,7 @@ public class MergeSortMainVersion {
     public static void main(String[] args) {
         int[] arr = {90, 23, 101, 45, 65, 23, 67, 89, 34, 23};
 
-        MergeSortMainVersion sorter = new MergeSortMainVersion();
+        MergeEven sorter = new MergeEven();
         sorter.sort(arr, 0, arr.length - 1);
 
         // Print the sorted array
