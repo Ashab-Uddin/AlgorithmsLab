@@ -1,4 +1,4 @@
-import java.util.*;
+import java.util.*; // find level for each node
 
 public class BFSCharNodesSimple {
     public static void main(String[] args) {

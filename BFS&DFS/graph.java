@@ -4,7 +4,7 @@ public class graph {
     static int[][] matrix = new int[20][20]; // 2D array that will contain the graph
 
     public static void main(String[] args) {
-        int e = 7, n = 5; // e is number of edges, n is number of vertices
+        int e = 9, n = 8; // e is number of edges, n is number of vertices
 
         inputMatrix(e);
         System.out.println("Output:");
