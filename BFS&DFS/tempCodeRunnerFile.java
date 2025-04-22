@@ -1,1 +1,1 @@
-CycleDetectionBFS
+BFSCharInput
