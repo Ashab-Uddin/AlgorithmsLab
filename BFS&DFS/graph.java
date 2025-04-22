@@ -1,4 +1,4 @@
-import java.util.Scanner;
+import java.util.*;
 
 public class graph {
     static int[][] matrix = new int[20][20]; // 2D array that will contain the graph
