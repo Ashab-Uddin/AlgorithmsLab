@@ -1,3 +1,4 @@
+import java.lang.Character.Subset;
 import java.util.*;
 
 class NumDistinct {
@@ -128,34 +129,50 @@ class NumDistinct {
         2 --------- 3
             4
         */
-        int V = 4; // Number of vertices in graph
-        int E = 5; // Number of edges in graph
+
+
+
+         int V = 6; // Number of vertices in graph
+        int E = 8; // Number of edges in graph
         NumDistinct graph = new NumDistinct(V, E);
 
-        // Add edge 0-1
+
+        // add edge 0-1
         graph.edge[0].src = 0;
         graph.edge[0].dest = 1;
-        graph.edge[0].weight = 10;
+        graph.edge[0].weight = 5;
 
-        // Add edge 0-2
         graph.edge[1].src = 0;
         graph.edge[1].dest = 2;
-        graph.edge[1].weight = 6;
+        graph.edge[1].weight = 8;
 
-        // Add edge 0-3
         graph.edge[2].src = 0;
         graph.edge[2].dest = 3;
-        graph.edge[2].weight = 5;
+        graph.edge[2].weight = 4;
 
-        // Add edge 1-3
-        graph.edge[3].src = 1;
-        graph.edge[3].dest = 3;
-        graph.edge[3].weight = 15;
+        graph.edge[3].src = 0;
+        graph.edge[3].dest = 4;
+        graph.edge[3].weight = 7;
 
-        // Add edge 2-3
-        graph.edge[4].src = 2;
-        graph.edge[4].dest = 3;
-        graph.edge[4].weight = 4;
+        // add edge 0-2
+        graph.edge[4].src = 1;
+        graph.edge[4].dest = 5;
+        graph.edge[4].weight = 2;
+
+        // add edge 0-3
+        graph.edge[5].src = 5;
+        graph.edge[5].dest = 3;
+        graph.edge[5].weight = 3;
+
+        // add edge 1-3
+        graph.edge[6].src = 3;
+        graph.edge[6].dest = 2;
+        graph.edge[6].weight = 2;
+
+        // add edge 2-3
+        graph.edge[7].src = 2;
+        graph.edge[7].dest = 4;
+        graph.edge[7].weight = 3;
 
         // Function call to count distinct MSTs
         int distinctMSTs = graph.countDistinctMSTs();
